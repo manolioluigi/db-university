@@ -10,3 +10,4 @@ laurea (286)
 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
 
 1) SELECT `name`, `surname` FROM `students` WHERE YEAR(date_of_birth) = "1990"; 
+2) SELECT * FROM `courses` WHERE `cfu` > 10; 
