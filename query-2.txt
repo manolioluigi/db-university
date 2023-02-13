@@ -36,3 +36,9 @@ Join
     7. BONUS: Selezionare per ogni studente quanti tentativi d’esame ha sostenuto per
     superare ciascuno dei suoi esami
 
+    1)
+    SELECT students.*, `degrees`.`name` AS `nome_corso`
+    FROM `students`
+    JOIN `degrees`
+    ON `students`.`degree_id` = `degrees`.`id`
+    WHERE `degrees`.`name` = "Corso di Laurea in Economia";
