@@ -44,8 +44,17 @@ Join
     WHERE `degrees`.`name` = "Corso di Laurea in Economia";
 
     2)
-    SELECT degrees.*, `departments`.`name`
+    SELECT degrees.*, `departments`.`name` AS `nome_dipartimento`
     FROM `degrees`
     JOIN `departments`
     ON `degrees`.`department_id` = `departments`.`id`
-    WHERE `departments`.`name` = 'Dipartimento di Neuroscienze' AND `degrees`.`level` = 'magistrale';
+    WHERE `departments`.`name` = "Dipartimento di Neuroscienze" AND `degrees`.`level` = 'magistrale';
+
+    3)
+    SELECT courses.*, teachers.*
+    FROM `courses`
+    JOIN `course_teacher`
+    ON `courses`.`id` = `course_teacher`.`course_id`
+    JOIN `teachers`
+    ON `teachers`.`id` = `course_teacher`.`teacher_id`
+    WHERE `teachers`.`id` = 44;
